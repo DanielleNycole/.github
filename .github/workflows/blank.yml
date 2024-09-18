@@ -1,13 +1,13 @@
-name: Update badges 
+name: Update badges
 
-on: 
-  schedule: 
-    #runs at 2am 
-    -cron: "0 2 * * *"
-jobs: 
+on:
+  schedule:
+    # Runs at 0am UTC every day
+    - cron: "0 0 * * *"
+jobs:
   update-readme:
     name: Update Readme with badges
     runs-on: ubuntu-latest
     steps:
       - name: Badges - Readme
-        uses: DanielleNycole/badge-readme@master
+        uses: DanielleNycole/badge-readme@main
